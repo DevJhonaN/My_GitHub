@@ -1,22 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portifolio</title>
+    <title>Git e GitHub para Iniciantes</title>
+    
 </head>
 <body>
-    <header>
-        <h1>Git and GitHub</h1>
-    </header>
-    <main>
-        <section>
-            <h2>. Conceitos de Git e GitHub</h2>
-        </section>
-        <section>
-            <h2>. Fluxo do Git/GitHub</h2>
-        </section>
-        <section>
-            <h2>. Como Resolver Conflitos</h2>
-        </section>
-    </main>
+    <div class="container">
+        <h1>Git e GitHub - Guia Completo para Iniciantes</h1>
+        
+        <h2>O que é Git?</h2>
+        <p>Git é um sistema de controle de versão distribuído, criado por Linus Torvalds em 2005. Ele permite que você acompanhe as mudanças no seu código ao longo do tempo, trabalhe em equipe de forma organizada e mantenha um histórico completo do desenvolvimento do seu projeto.</p>
+        
+        <p>Imagine o Git como uma máquina do tempo para o seu código. Você pode voltar para qualquer versão anterior, ver exatamente o que mudou e quando, e trabalhar em diferentes funcionalidades simultaneamente sem bagunçar o código principal.</p>
+        
+        <h2>O que é GitHub?</h2>
+        <p>GitHub é uma plataforma online que hospeda repositórios Git na nuvem. É como um "Google Drive" para desenvolvedores, mas muito mais poderoso. Além de armazenar seu código, o GitHub oferece ferramentas para colaboração, controle de issues, wikis e muito mais.</p>
+        
+        <p>Enquanto Git é a ferramenta que você usa localmente no seu computador, GitHub é o serviço online onde você pode compartilhar seus projetos com o mundo e colaborar com outros desenvolvedores.</p>
+        
+        <h2>Conceitos Fundamentais do Git</h2>
+        
+        <h3>Repository (Repositório)</h3>
+        <p>Um repositório é como uma pasta do seu projeto, mas com superpoderes. Ele contém todos os arquivos do projeto e todo o histórico de mudanças. Pode existir localmente no seu computador e/ou remotamente no GitHub.</p>
+        
+        <h3>Commit</h3>
+        <p>Um commit é como um "checkpoint" ou "save" do seu projeto. Cada commit representa um estado específico dos seus arquivos em um determinado momento. É acompanhado de uma mensagem descrevendo o que foi alterado.</p>
+        
+        <h3>Branch (Ramificação)</h3>
+        <p>Uma branch é como uma linha paralela de desenvolvimento. A branch principal geralmente se chama "main" ou "master". Você pode criar outras branches para desenvolver novas funcionalidades sem afetar o código principal.</p>
+        
+        <h3>Merge</h3>
+        <p>Merge é o processo de combinar mudanças de uma branch com outra. Por exemplo, quando você termina uma funcionalidade em uma branch separada, você faz merge dela com a branch principal.</p>
+        
+        <h3>Working Directory, Staging Area e Repository</h3>
+        <p>Working Directory é onde você trabalha nos arquivos. Staging Area é onde você prepara os arquivos que serão commitados. Repository é onde ficam salvos todos os commits.</p>
+        
+        <h2>Fluxo Básico do Git</h2>
+        
+        <div class="steps">
+            <h3>Passo a Passo do Fluxo Git:</h3>
+            <p><strong>1. Inicializar ou Clonar:</strong> Você começa criando um novo repositório ou clonando um existente.</p>
+            
+            <p><strong>2. Trabalhar nos Arquivos:</strong> Você edita, cria ou exclui arquivos no seu Working Directory.</p>
+            
+            <p><strong>3. Adicionar ao Staging:</strong> Você seleciona quais mudanças quer incluir no próximo commit usando git add.</p>
+            
+            <p><strong>4. Fazer Commit:</strong> Você salva as mudanças do Staging Area no repositório com git commit.</p>
+            
+            <p><strong>5. Enviar para Remoto:</strong> Você envia seus commits para o GitHub usando git push.</p>
+        </div>
+        
+        <h3>Comandos Básicos</h3>
+        <div class="code">
+git init - Inicializa um novo repositório<br>
+git clone [url] - Clona um repositório existente<br>
+git add [arquivo] - Adiciona arquivo ao staging<br>
+git add . - Adiciona todos os arquivos modificados<br>
+git commit -m "mensagem" - Faz commit com mensagem<br>
+git push - Envia commits para o repositório remoto<br>
+git pull - Puxa mudanças do repositório remoto<br>
+git status - Mostra o status dos arquivos<br>
+git log - Mostra histórico de commits
+        </div>
+        
+        <h2>Fluxo do GitHub</h2>
+        
+        <h3>Repositório Local vs Remoto</h3>
+        <p>O repositório local fica no seu computador, onde você trabalha nos arquivos. O repositório remoto fica no GitHub, onde você compartilha seu código e colabora com outros.</p>
+        
+        <h3>Push e Pull</h3>
+        <p><strong>Push:</strong> Envia suas mudanças locais para o GitHub. É como "subir" seu código.</p>
+        <p><strong>Pull:</strong> Traz mudanças do GitHub para o seu repositório local. É como "baixar" atualizações.</p>
+        
+        <h3>Fork e Pull Request</h3>
+        <p><strong>Fork:</strong> Cria uma cópia de um projeto de outra pessoa na sua conta do GitHub.</p>
+        <p><strong>Pull Request:</strong> Solicita que suas mudanças sejam incorporadas ao projeto original. É como pedir: "Olha as melhorias que fiz, você pode incluir no projeto?"</p>
+        
+        <h2>Trabalhando com Branches</h2>
+        
+        <p>Branches são fundamentais para um fluxo de trabalho organizado. Elas permitem que você trabalhe em diferentes funcionalidades simultaneamente sem bagunçar o código principal.</p>
+        
+        <h3>Fluxo com Branches:</h3>
+        <div class="steps">
+            <p><strong>1.</strong> Criar uma nova branch para sua funcionalidade</p>
+            <p><strong>2.</strong> Trabalhar nessa branch, fazendo commits normalmente</p>
+            <p><strong>3.</strong> Quando terminar, fazer merge com a branch principal</p>
+            <p><strong>4.</strong> Deletar a branch da funcionalidade (opcional)</p>
+        </div>
+        
+        <div class="code">
+git branch [nome] - Cria uma nova branch<br>
+git checkout [nome] - Muda para a branch<br>
+git checkout -b [nome] - Cria e muda para nova branch<br>
+git merge [nome] - Faz merge de uma branch<br>
+git branch -d [nome] - Deleta uma branch
+        </div>
+        
+        <h2>Como Resolver Conflitos</h2>
+        
+        <p>Conflitos acontecem quando duas pessoas modificam a mesma linha de código em branches diferentes, ou quando você tenta fazer merge de mudanças incompatíveis. Não se preocupe, é normal e tem solução!</p>
+        
+        <h3>Quando Conflitos Acontecem:</h3>
+        <ul>
+            <li>Duas pessoas editam a mesma linha do mesmo arquivo</li>
+            <li>Uma pessoa deleta um arquivo que outra pessoa modificou</li>
+            <li>Mudanças simultâneas em arquivos relacionados</li>
+        </ul>
+        
+        <h3>Como Identificar um Conflito:</h3>
+        <div class="highlight">
+            <p>Quando há conflito, o Git para o processo de merge e mostra uma mensagem como:</p>
+            <p>"CONFLICT (content): Merge conflict in arquivo.txt"</p>
+            <p>O Git também marca os conflitos diretamente no arquivo com símbolos especiais.</p>
+        </div>
+        
+        <h3>Marcadores de Conflito:</h3>
+        <div class="code">
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>
+Seu código (branch atual)<br>
+=======<br>
+Código da outra branch<br>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; nome-da-branch
+        </div>
+        
+        <h3>Passo a Passo para Resolver Conflitos:</h3>
+        <div class="steps">
+            <p><strong>1. Identificar o Conflito:</strong> Use git status para ver quais arquivos têm conflitos.</p>
+            
+            <p><strong>2. Abrir o Arquivo:</strong> Abra o arquivo em conflito no seu editor de texto.</p>
+            
+            <p><strong>3. Escolher a Versão:</strong> Decida qual código manter:</p>
+            <ul>
+                <li>Manter apenas o seu código (remover o código da outra branch)</li>
+                <li>Manter apenas o código da outra branch (remover o seu)</li>
+                <li>Combinar ambos os códigos de forma inteligente</li>
+                <li>Reescrever completamente a seção</li>
+            </ul>
+            
+            <p><strong>4. Limpar os Marcadores:</strong> Remova todas as linhas com &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, e &gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
+            
+            <p><strong>5. Testar o Código:</strong> Certifique-se de que o código funciona após a resolução.</p>
+            
+            <p><strong>6. Adicionar e Commitar:</strong> Use git add e git commit para finalizar o merge.</p>
+        </div>
+        
+        <h3>Comandos Úteis para Conflitos:</h3>
+        <div class="code">
+git status - Ver arquivos em conflito<br>
+git diff - Ver detalhes dos conflitos<br>
+git merge --abort - Cancelar o merge e voltar ao estado anterior<br>
+git add [arquivo] - Marcar conflito como resolvido<br>
+git commit - Finalizar o merge após resolver conflitos
+        </div>
+        
+        <h3>Dicas para Evitar Conflitos:</h3>
+        <ul>
+            <li>Faça pull frequentemente para manter seu código atualizado</li>
+            <li>Trabalhe em branches separadas para funcionalidades diferentes</li>
+            <li>Comunique-se com a equipe sobre quais arquivos estão sendo editados</li>
+            <li>Faça commits pequenos e frequentes</li>
+            <li>Evite reformatar arquivos inteiros desnecessariamente</li>
+        </ul>
+        
+        <h2>Exemplo Prático de Fluxo de Trabalho</h2>
+        
+        <div class="steps">
+            <h3>Cenário: Adicionando uma nova funcionalidade</h3>
+            
+            <p><strong>1. Atualizar a branch principal:</strong></p>
+            <div class="code">
+git checkout main<br>
+git pull origin main
+            </div>
+            
+            <p><strong>2. Criar branch para nova funcionalidade:</strong></p>
+            <div class="code">
+git checkout -b nova-funcionalidade
+            </div>
+            
+            <p><strong>3. Trabalhar na funcionalidade:</strong></p>
+            <div class="code">
+# Editar arquivos...<br>
+git add .<br>
+git commit -m "Adiciona nova funcionalidade"
+            </div>
+            
+            <p><strong>4. Enviar branch para GitHub:</strong></p>
+            <div class="code">
+git push origin nova-funcionalidade
+            </div>
+            
+            <p><strong>5. Fazer merge na branch principal:</strong></p>
+            <div class="code">
+git checkout main<br>
+git merge nova-funcionalidade<br>
+git push origin main
+            </div>
+            
+            <p><strong>6. Limpar (opcional):</strong></p>
+            <div class="code">
+git branch -d nova-funcionalidade
+            </div>
+        </div>
+        
+        <h2>Boas Práticas</h2>
+        
+        <h3>Mensagens de Commit:</h3>
+        <ul>
+            <li>Use mensagens claras e descritivas</li>
+            <li>Comece com um verbo no imperativo (Ex: "Adiciona", "Corrige", "Remove")</li>
+            <li>Seja específico sobre o que foi alterado</li>
+            <li>Mantenha a primeira linha com até 50 caracteres</li>
+        </ul>
+        
+        <h3>Organização:</h3>
+        <ul>
+            <li>Uma branch para cada funcionalidade ou correção</li>
+            <li>Nomes de branches descritivos (ex: "corrige-bug-login")</li>
+            <li>Commits pequenos e focados em uma mudança específica</li>
+            <li>Sempre teste antes de fazer push</li>
+        </ul>
+        
+        <div class="highlight">
+            <h3>Lembre-se:</h3>
+            <p>Git e GitHub podem parecer complicados no início, mas com a prática se tornam ferramentas indispensáveis. Comece devagar, pratique os comandos básicos e aos poucos você se sentirá confortável com fluxos mais complexos.</p>
+            
+            <p>A chave é praticar! Crie um repositório de teste no GitHub e experimente os comandos. Não tenha medo de cometer erros - é assim que se aprende!</p>
+        </div>
+        
+        <h2>Próximos Passos</h2>
+        <p>Agora que você conhece os conceitos básicos, pratique criando um repositório no GitHub, clonando-o localmente, fazendo algumas modificações, commitando e enviando de volta. Com o tempo, explore funcionalidades mais avançadas como rebasing, stashing e hooks.</p>
+        
+        <p>Lembre-se: a melhor forma de aprender Git e GitHub é usando-os em projetos reais. Cada desenvolvedor tem seu próprio fluxo de trabalho, e você desenvolverá o seu conforme ganha experiência.</p>
+    </div>
+</body>
+</html>
