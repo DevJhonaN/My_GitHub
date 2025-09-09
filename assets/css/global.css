@@ -1,0 +1,544 @@
+/* Importando mais fontes e criando design muito mais sofisticado */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+/* Reset e configurações base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background muito mais elaborado com padrões geométricos animados */
+body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.7;
+  color: #0f172a;
+  background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #0f0f23 0%, #1e1b4b 25%, #312e81 50%, #1e1b4b 75%, #0f0f23 100%);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Padrão geométrico animado de fundo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.02) 2px, transparent 2px),
+    radial-gradient(circle at 75px 75px, rgba(120, 119, 198, 0.03) 2px, transparent 2px);
+  background-size: 100px 100px, 150px 150px;
+  animation: float 20s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(1deg);
+  }
+}
+
+/* Container com efeito glassmorphism muito mais avançado */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 30px;
+  padding: 4rem;
+  box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0
+    rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Borda animada muito mais elaborada */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff, #06ffa5, #ffbe0b, #fb5607, #ff006e);
+  background-size: 400% 100%;
+  animation: rainbow 4s linear infinite;
+}
+
+/* Elementos decorativos flutuantes */
+.container::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(120, 119, 198, 0.1) 0%, transparent 70%);
+  animation: rotate 30s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tipografia muito mais sofisticada */
+h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 2rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Decoração do título muito mais elaborada */
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ff006e, #8338ec, #3a86ff, transparent);
+  border-radius: 2px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+h1::before {
+  content: "✨";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: translateX(-50%) scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1.1);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) rotate(180deg) scale(1.2);
+  }
+}
+
+/* Títulos h2 com efeitos visuais avançados */
+h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 4rem 0 2rem 0;
+  position: relative;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(131, 56, 236, 0.1));
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(180deg, #ff006e, #8338ec, #3a86ff);
+  border-radius: 0 3px 3px 0;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 110, 0.1));
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+/* Subtítulos h3 mais elegantes */
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin: 2.5rem 0 1.5rem 0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+h3::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #06ffa5;
+  font-size: 1rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+/* Parágrafos com melhor legibilidade */
+p {
+  margin: 1.5rem 0;
+  text-align: justify;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* Blocos de código muito mais sofisticados */
+.code {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  color: #e2e8f0;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  position: relative;
+  overflow-x: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #06ffa5, #3a86ff, #8338ec);
+  border-radius: 20px 20px 0 0;
+}
+
+.code::after {
+  content: "💻";
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+/* Caixas de destaque muito mais atrativas */
+.highlight {
+  background: linear-gradient(135deg, rgba(255, 190, 11, 0.15) 0%, rgba(251, 86, 7, 0.1) 100%);
+  border: 1px solid rgba(255, 190, 11, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(255, 190, 11, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.highlight::before {
+  content: "💡";
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  animation: glow 2s ease-in-out infinite;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 190, 11, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+  }
+}
+
+/* Caixas de passos mais dinâmicas */
+.steps {
+  background: linear-gradient(135deg, rgba(58, 134, 255, 0.15) 0%, rgba(6, 255, 165, 0.1) 100%);
+  border: 1px solid rgba(58, 134, 255, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(58, 134, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.steps::before {
+  content: "📋";
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.steps::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3a86ff, #06ffa5);
+  animation: progress 4s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+/* Listas mais estilizadas */
+ul {
+  padding-left: 2rem;
+  margin: 1.5rem 0;
+}
+
+li {
+  margin: 1rem 0;
+  color: #cbd5e1;
+  position: relative;
+  padding-left: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+ul li::before {
+  content: "▸";
+  position: absolute;
+  left: -1rem;
+  color: #06ffa5;
+  font-weight: bold;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Elementos strong mais destacados */
+strong {
+  color: #e2e8f0;
+  font-weight: 700;
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.2), rgba(131, 56, 236, 0.2));
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  .container {
+    padding: 2.5rem 2rem;
+    border-radius: 25px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin: 3rem 0 1.5rem 0;
+    padding: 1rem 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .code,
+  .highlight,
+  .steps {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+  .code,
+  .highlight,
+  .steps {
+    padding: 1rem;
+  }
+}
+
+/* Animações de entrada mais elaboradas */
+.container {
+  animation: slideInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Scroll suave e melhorias de acessibilidade */
+html {
+  scroll-behavior: smooth;
+}
+
+:focus {
+  outline: 3px solid #06ffa5;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Seleção de texto personalizada mais bonita */
+::selection {
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.3), rgba(131, 56, 236, 0.3));
+  color: #ffffff;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #8338ec, #3a86ff);
+}
