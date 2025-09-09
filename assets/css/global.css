@@ -8,22 +8,22 @@
   box-sizing: border-box;
 }
 
-/* Background muito mais elaborado com padrões geométricos animados */
+/* Alterando background de azul/verde para tons de laranja/vermelho mais quentes */
 body {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.7;
   color: #0f172a;
-  background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%),
-    linear-gradient(135deg, #0f0f23 0%, #1e1b4b 25%, #312e81 50%, #1e1b4b 75%, #0f0f23 100%);
+  background: radial-gradient(circle at 20% 80%, rgba(251, 146, 60, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(239, 68, 68, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(245, 101, 101, 0.15) 0%, transparent 50%),
+    linear-gradient(135deg, #1a0b0b 0%, #7c2d12 25%, #991b1b 50%, #7c2d12 75%, #1a0b0b 100%);
   min-height: 100vh;
   padding: 2rem 1rem;
   position: relative;
   overflow-x: hidden;
 }
 
-/* Padrão geométrico animado de fundo */
+/* Ajustando padrão geométrico para combinar com nova paleta laranja/vermelha */
 body::before {
   content: "";
   position: fixed;
@@ -32,20 +32,10 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.02) 2px, transparent 2px),
-    radial-gradient(circle at 75px 75px, rgba(120, 119, 198, 0.03) 2px, transparent 2px);
+    radial-gradient(circle at 75px 75px, rgba(251, 146, 60, 0.03) 2px, transparent 2px);
   background-size: 100px 100px, 150px 150px;
   animation: float 20s ease-in-out infinite;
   z-index: -1;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(1deg);
-  }
 }
 
 /* Container com efeito glassmorphism muito mais avançado */
@@ -60,10 +50,9 @@ body::before {
     rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Borda animada muito mais elaborada */
+/* Atualizando gradiente da borda animada para nova paleta laranja */
 .container::before {
   content: "";
   position: absolute;
@@ -71,12 +60,12 @@ body::before {
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff, #06ffa5, #ffbe0b, #fb5607, #ff006e);
+  background: linear-gradient(90deg, #f97316, #ef4444, #f59e0b, #fb923c, #dc2626, #ea580c, #f97316);
   background-size: 400% 100%;
   animation: rainbow 4s linear infinite;
 }
 
-/* Elementos decorativos flutuantes */
+/* Elementos decorativos flutuantes com tons laranja */
 .container::after {
   content: "";
   position: absolute;
@@ -84,7 +73,7 @@ body::before {
   right: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(120, 119, 198, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(251, 146, 60, 0.08) 0%, transparent 70%);
   animation: rotate 30s linear infinite;
   z-index: -1;
 }
@@ -107,12 +96,12 @@ body::before {
   }
 }
 
-/* Tipografia muito mais sofisticada */
+/* Tipografia com gradiente laranja/vermelho */
 h1 {
   font-family: "Space Grotesk", sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
-  background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff);
+  background: linear-gradient(135deg, #f97316, #ef4444, #f59e0b);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -124,7 +113,7 @@ h1 {
   line-height: 1.1;
 }
 
-/* Decoração do título muito mais elaborada */
+/* Atualizando decoração do título com cores laranja/vermelha */
 h1::after {
   content: "";
   position: absolute;
@@ -133,44 +122,12 @@ h1::after {
   transform: translateX(-50%);
   width: 200px;
   height: 4px;
-  background: linear-gradient(90deg, transparent, #ff006e, #8338ec, #3a86ff, transparent);
+  background: linear-gradient(90deg, transparent, #f97316, #ef4444, #f59e0b, transparent);
   border-radius: 2px;
   animation: pulse 2s ease-in-out infinite;
 }
 
-h1::before {
-  content: "✨";
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  animation: sparkle 3s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 0.6;
-    transform: translateX(-50%) scaleX(1);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(-50%) scaleX(1.1);
-  }
-}
-
-@keyframes sparkle {
-  0%,
-  100% {
-    transform: translateX(-50%) rotate(0deg) scale(1);
-  }
-  50% {
-    transform: translateX(-50%) rotate(180deg) scale(1.2);
-  }
-}
-
-/* Títulos h2 com efeitos visuais avançados */
+/* Títulos h2 com efeitos visuais em tons laranja/vermelho */
 h2 {
   font-family: "Space Grotesk", sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
@@ -179,7 +136,7 @@ h2 {
   margin: 4rem 0 2rem 0;
   position: relative;
   padding: 1.5rem 2rem;
-  background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(131, 56, 236, 0.1));
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(239, 68, 68, 0.1));
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -193,7 +150,7 @@ h2::before {
   top: 0;
   bottom: 0;
   width: 6px;
-  background: linear-gradient(180deg, #ff006e, #8338ec, #3a86ff);
+  background: linear-gradient(180deg, #f97316, #ef4444, #f59e0b);
   border-radius: 0 3px 3px 0;
 }
 
@@ -204,22 +161,8 @@ h2::after {
   right: 0;
   width: 100px;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 0, 110, 0.1));
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.1));
   animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
 }
 
 /* Subtítulos h3 mais elegantes */
@@ -237,7 +180,7 @@ h3::before {
   content: "▶";
   position: absolute;
   left: 0;
-  color: #06ffa5;
+  color: #fb923c;
   font-size: 1rem;
   animation: bounce 2s ease-in-out infinite;
 }
@@ -285,7 +228,7 @@ p {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #06ffa5, #3a86ff, #8338ec);
+  background: linear-gradient(90deg, #fb923c, #ef4444, #f59e0b);
   border-radius: 20px 20px 0 0;
 }
 
@@ -298,16 +241,16 @@ p {
   opacity: 0.7;
 }
 
-/* Caixas de destaque muito mais atrativas */
+/* Caixas de destaque muito mais atrativas com tons laranja */
 .highlight {
-  background: linear-gradient(135deg, rgba(255, 190, 11, 0.15) 0%, rgba(251, 86, 7, 0.1) 100%);
-  border: 1px solid rgba(255, 190, 11, 0.3);
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.15) 0%, rgba(249, 115, 22, 0.1) 100%);
+  border: 1px solid rgba(251, 146, 60, 0.3);
   border-radius: 20px;
   padding: 2rem;
   margin: 2rem 0;
   position: relative;
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(255, 190, 11, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(251, 146, 60, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 
@@ -327,7 +270,7 @@ p {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 190, 11, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(251, 146, 60, 0.1) 0%, transparent 70%);
   animation: rotate 20s linear infinite;
   z-index: -1;
 }
@@ -344,16 +287,16 @@ p {
   }
 }
 
-/* Caixas de passos mais dinâmicas */
+/* Caixas de passos mais dinâmicas com tons vermelhos */
 .steps {
-  background: linear-gradient(135deg, rgba(58, 134, 255, 0.15) 0%, rgba(6, 255, 165, 0.1) 100%);
-  border: 1px solid rgba(58, 134, 255, 0.3);
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.1) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.3);
   border-radius: 20px;
   padding: 2rem;
   margin: 2rem 0;
   position: relative;
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(58, 134, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 
@@ -373,7 +316,7 @@ p {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #3a86ff, #06ffa5);
+  background: linear-gradient(90deg, #ef4444, #fb923c);
   animation: progress 4s ease-in-out infinite;
 }
 
@@ -408,7 +351,7 @@ ul li::before {
   content: "▸";
   position: absolute;
   left: -1rem;
-  color: #06ffa5;
+  color: #fb923c;
   font-weight: bold;
   animation: pulse-dot 2s ease-in-out infinite;
 }
@@ -425,11 +368,11 @@ ul li::before {
   }
 }
 
-/* Elementos strong mais destacados */
+/* Elementos strong mais destacados com tons laranja/vermelho */
 strong {
   color: #e2e8f0;
   font-weight: 700;
-  background: linear-gradient(135deg, rgba(255, 0, 110, 0.2), rgba(131, 56, 236, 0.2));
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(239, 68, 68, 0.2));
   padding: 0.2rem 0.5rem;
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -513,14 +456,14 @@ html {
 }
 
 :focus {
-  outline: 3px solid #06ffa5;
+  outline: 3px solid #fb923c;
   outline-offset: 3px;
   border-radius: 6px;
 }
 
-/* Seleção de texto personalizada mais bonita */
+/* Seleção de texto personalizada mais bonita com tons laranja/vermelho */
 ::selection {
-  background: linear-gradient(135deg, rgba(255, 0, 110, 0.3), rgba(131, 56, 236, 0.3));
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.3), rgba(239, 68, 68, 0.3));
   color: #ffffff;
 }
 
@@ -535,10 +478,149 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #ff006e, #8338ec);
+  background: linear-gradient(135deg, #10b981, #3b82f6);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #8338ec, #3a86ff);
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+/* Adicionando estilos para o rodapé com logos Git e GitHub */
+.footer {
+  margin-top: 4rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 25px;
+  padding: 3rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, #ef4444, #f59e0b, #fb923c);
+  background-size: 300% 100%;
+  animation: rainbow 3s linear infinite;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-logos {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.footer-logo:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-text h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f97316, #ef4444, #f59e0b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+.footer-text h3::before {
+  display: none;
+}
+
+.footer-text p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.8rem 0;
+  max-width: 600px;
+}
+
+.footer-info {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 1rem;
+}
+
+.footer-info p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+/* Responsividade do rodapé */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .footer-logos {
+    gap: 1.5rem;
+  }
+
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-content {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-logos {
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .footer-text h3 {
+    font-size: 1.3rem;
+  }
 }
